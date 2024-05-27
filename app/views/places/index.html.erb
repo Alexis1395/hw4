@@ -1,12 +1,15 @@
-<h1>Places</h1>
+<main class="container">
+  <h1 class="mb-4">Places</h1>
 
-<button>
-  <a href="/places/new">New place</a>
-</button>
+  <a href="/places/new" class="btn btn-dark mb-4">New Place</a>
 
-<ul>
-  <% for place in @places %>
-    <li><a href="/places/<%= place["id"] %>"><%= place["name"] %></a></li>
-  <% end %>
-</ul>
+  <ul class="list-group">
+    <% @places.each do |place| %>
+      <li class="list-group-item border-0 p-0">
+        <a href="/places/<%= place["id"] %>" class="text-decoration-none"><%= place["name"] %></a>
+      </li>
+    <% end %>
+  </ul>
+</main>
+
 
