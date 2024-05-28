@@ -12,4 +12,6 @@ class UsersController < ApplicationController
     @user.save
     redirect_to "/places"
   end
+
 end
+
